@@ -5,7 +5,9 @@ on:
       branches:
         - main
 
-
+env:
+    REPONAME: "Repository is ${{ github.repository }}"
+    SHA_COMMIT: "Sha commit is ${{ github.sha }}"
 jobs:
 #   my_test:
 #     runs-on: ubuntu-latest
@@ -36,7 +38,7 @@ jobs:
     # needs: [my_deploy]
     steps:
     -  name: Get current date
-       run: echo "YEARIS=$(date +'%Y-%m-%dT%H:%M:%S')}" >> $GITHUB_ENV
+       run: echo "$(date +'%Y-%m-%dT%H:%M:%S'"
     -  name: Show date
        run: echo "Date is $YEARIS"
        
