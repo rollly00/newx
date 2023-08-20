@@ -15,13 +15,14 @@ jobs:
 
   install_python:
     runs-on: ubuntu-latest
-    
+    needs: my_test
     steps:
     -  name: Install python
        run: apt-get install python3
 
   check_version:
     runs-on: ubuntu-latest
+    needs: install_python
     
     steps:
     -  name: Check version
@@ -29,6 +30,7 @@ jobs:
        
   my_deploy:
     runs-on: ubuntu-latest
+    needs: check_version
 
     steps:
     -  name: Print deploy
