@@ -38,7 +38,7 @@ jobs:
     
     steps:
     -  name: Testing env variable
-       run: echo ${{ Reponame is env.REPONAME. Sha is SHACOMMIT }}
+       run: echo "${{ Reponame is env.REPONAME. Sha is SHACOMMIT }}"
     
   yearnow:
     runs-on: ubuntu-latest
