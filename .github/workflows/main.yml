@@ -8,7 +8,7 @@ on:
 jobs:
   my_test:
     runs-on: ubuntu-latest
-
+    needs: [my_deploy]
     steps:
     -  name: Print hello
        run: echo "Hello, it's test"
