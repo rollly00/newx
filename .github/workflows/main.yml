@@ -38,4 +38,4 @@ jobs:
     -  name: Get current date
        run: echo "YEARIS=2020-10-07T12:00:00+01:00" >> $GITHUB_ENV
     -  name: Show date
-       run: echo "Date is ${{ env.YEARIS }}
+       run: echo "Date is ${{ env.YEARIS }}"
