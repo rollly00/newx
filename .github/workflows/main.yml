@@ -50,4 +50,4 @@ jobs:
           timezoneLinux: "Asia/Almaty"
          
       - name: Date with timezone
-        run: echo "Date with timezone $YEARIS"
+        run: echo "Date with timezone $(date +'%Y-%m-%dT%H:%M:%S')}"
