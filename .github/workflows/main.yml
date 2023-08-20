@@ -5,6 +5,9 @@ on:
       branches:
         - main
 
+env:
+    YEAR_IS: "2020-10-07T12:00:00+01:00"
+
 jobs:
   my_test:
     runs-on: ubuntu-latest
@@ -35,3 +38,10 @@ jobs:
     steps:
     -  name: Print deploy
        run: echo "Hello, it's deploy"
+
+  yearnow:
+    runs-on: ubuntu-latest
+
+    steps:
+    -  name: Get current date
+       run: echo ${{ env.YEAR_IS }}
