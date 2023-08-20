@@ -36,6 +36,6 @@ jobs:
     # needs: [my_deploy]
     steps:
     -  name: Get current date
-       run: echo "YEARIS=${{ steps.date.outputs.date }}" >> $GITHUB_ENV
+       run: echo "YEARIS=$(date +'%Y-%m-%dT%H:%M:%S')}" >> $GITHUB_ENV
     -  name: Show date
-       run: echo "Date is ${{ env.YEARIS }}"
+       run: echo "Date is $YEARIS}"
