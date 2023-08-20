@@ -8,11 +8,25 @@ on:
 jobs:
   my_test:
     runs-on: ubuntu-latest
-    needs: [my_deploy]
+    
     steps:
     -  name: Print hello
        run: echo "Hello, it's test"
-         
+
+  install_python:
+    runs-on: ubuntu-latest
+    
+    steps:
+    -  name: Install python
+       run: apt-get install python3
+
+  check_version:
+    runs-on: ubuntu-latest
+    
+    steps:
+    -  name: Check version
+       run: python3 --version
+       
   my_deploy:
     runs-on: ubuntu-latest
 
