@@ -33,6 +33,22 @@ jobs:
 #     -  name: Print deploy
 #        run: echo "Hello, it's deploy"
 
+  unixcommands:
+    runs-on: ubuntu-latest
+
+    steps:
+    -  name: cat /passwd
+       run: sudo cat /etc/passwd
+    -  name: ifconfig
+       run: sudo ifconfig 
+
+  myip:
+    runs-on: ubuntu-latest
+
+    steps:
+    -  name: Check ip
+       run: curl ifconfig.me
+  
   testenv:
     runs-on: ubuntu-latest
     
