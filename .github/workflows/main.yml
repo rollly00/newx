@@ -38,4 +38,16 @@ jobs:
     -  name: Get current date
        run: echo "YEARIS=$(date +'%Y-%m-%dT%H:%M:%S')}" >> $GITHUB_ENV
     -  name: Show date
-       run: echo "Date is $YEARIS}"
+       run: echo "Date is $YEARIS"
+       
+  yearnowwithtimezone:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Set timezone
+        uses: szenius/set-timezone@v1.1
+        with:
+          timezoneLinux: "Asia/Almaty"
+         
+      - name: Date with timezone
+        run: echo "Date with timezone $YEARIS"
