@@ -38,7 +38,7 @@ jobs:
     # needs: [my_deploy]
     steps:
     -  name: Get current date
-       run: echo date +'%Y-%m-%dT%H:%M:%S'
+       run: echo $(date +'%Y-%m-%dT%H:%M:%S')
     -  name: Show date
        run: echo "Date is $YEARIS"
        
