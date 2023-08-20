@@ -41,8 +41,8 @@ jobs:
        run: | 
            echo 
            "
-           ${{ REPONAME }}
-           ${{ SHA_COMMIT }}
+           $REPONAME
+           $SHA_COMMIT
            "
     
   yearnow:
