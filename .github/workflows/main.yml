@@ -38,7 +38,7 @@ jobs:
     
     steps:
     -  name: Testing env variable
-       run: echo "$REPONAME \n$SHA_COMMIT"
+       run: echo "$REPONAME \n $SHA_COMMIT"
     
   yearnow:
     runs-on: ubuntu-latest
