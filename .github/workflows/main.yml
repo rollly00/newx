@@ -18,7 +18,7 @@ jobs:
     needs: my_test
     steps:
     -  name: Install python
-       run: apt-get install python3
+       run: sudo apt-get install python3
 
   check_version:
     runs-on: ubuntu-latest
